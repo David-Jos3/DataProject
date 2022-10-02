@@ -95,14 +95,17 @@ function backgroudHours(backgroud, backgroudHours, hour) {
     if (hour >= 5 && hour <= 11) {
         backgroud.style.background = 'rgb(243 220 146)';
         backgroudHours.classList.add('area-time-afternoon');
+        backgroudHours.classList.remove('area-time-night');
 
     } else if (hour >= 12 && hour < 18) {
         backgroud.style.background = 'rgb(223 166 71)';
-        backgroudHours.classList.add('area-time-morning')
+        backgroudHours.classList.add('area-time-morning');
+        backgroudHours.classList.remove('area-time-afternoon');
 
     } else if (hour >= 18 && hour <= 24) {
         backgroud.style.background = ' rgb(20 20 19)';
-        backgroudHours.classList.add('area-time-night')
+        backgroudHours.classList.add('area-time-night');
+        backgroudHours.classList.remove('area-time-morning');
 
 
     } else if (hour >= 1 && hour < 5) {
